@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-section py-20">
+    <section className="bg-gradient-section py-20 fade-in-up">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-navy mb-4">

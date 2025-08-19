@@ -12,7 +12,7 @@ const StatisticsSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-section py-20">
+    <section className="bg-gradient-section py-20 fade-in-up">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold text-navy mb-4">
           Pioneers of Managed SaaS
@@ -27,12 +27,12 @@ const StatisticsSection = () => {
             {statsRow1.map((stat, index) => (
               <div
                 key={index}
-                className="hover-lift p-6 bg-navy rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                className="slide-in-mask p-6 bg-white border-2 border-navy rounded-xl shadow-md hover:bg-navy hover:border-white hover:text-white hover:-translate-y-2 hover:shadow-xl transition-all duration-300 transform cursor-pointer group delay-1"
               >
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-navy group-hover:text-white mb-2 transition-colors duration-300">
                   {stat.number}
                 </div>
-                <div className="text-sm lg:text-base text-gray-300 font-medium">
+                <div className="text-sm lg:text-base text-gray-600 group-hover:text-gray-200 font-medium transition-colors duration-300">
                   {stat.label}
                 </div>
               </div>
@@ -44,12 +44,12 @@ const StatisticsSection = () => {
             {statsRow2.map((stat, index) => (
               <div
                 key={index}
-                className="hover-lift p-6 bg-navy rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                className="slide-in-mask p-6 bg-white border-2 border-navy rounded-xl shadow-md hover:bg-navy hover:border-white hover:text-white hover:-translate-y-2 hover:shadow-xl transition-all duration-300 transform cursor-pointer group delay-4"
               >
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-navy group-hover:text-white mb-2 transition-colors duration-300">
                   {stat.number}
                 </div>
-                <div className="text-sm lg:text-base text-gray-300 font-medium">
+                <div className="text-sm lg:text-base text-gray-600 group-hover:text-gray-200 font-medium transition-colors duration-300">
                   {stat.label}
                 </div>
               </div>

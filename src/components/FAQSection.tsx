@@ -26,7 +26,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20 fade-in-up">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-navy mb-4">
@@ -42,15 +42,15 @@ const FAQSection = () => {
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-gray-50 rounded-xl px-6 border-none"
+              className="bg-gray-50 rounded-xl px-6 border-none data-[state=open]:bg-gray-100 data-[state=open]:shadow-md transition-all duration-300"
             >
-              <AccordionTrigger className="text-left hover:no-underline py-6">
-                <span className="text-lg font-semibold text-navy pr-4">
+              <AccordionTrigger className="text-left hover:no-underline py-6 group">
+                <span className="text-lg font-semibold text-navy pr-4 group-data-[state=open]:text-teal transition-colors duration-300">
                   {faq.question}
                 </span>
               </AccordionTrigger>
               <AccordionContent className="pb-6">
-                <p className="text-gray-700 leading-relaxed text-base">
+                <p className="text-gray-700 leading-relaxed text-base animate-fade-in">
                   {faq.answer}
                 </p>
               </AccordionContent>
@@ -64,7 +64,7 @@ const FAQSection = () => {
           </p>
           <div className="flex justify-center">
             <button className="btn-hero">
-              Talk to Our Experts
+              Contact Us
             </button>
           </div>
         </div>

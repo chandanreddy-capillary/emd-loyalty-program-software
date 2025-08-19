@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,31 +32,44 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 items-center">
-            {navigation.map((item) => (
+          <nav className="hidden md:flex items-center space-x-12">
+            <a
+              href="#solutions"
+              className="nav-link font-medium"
+            >
+              Solutions
+            </a>
+            <div className="flex items-center space-x-12">
               <a
-                key={item.name}
-                href={item.href}
+                href="#clients"
                 className="nav-link font-medium"
               >
-                {item.name}
+                Clients
               </a>
-            ))}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="nav-link font-medium flex items-center gap-1">
-                Industries
-                <ChevronDown size={16} />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white shadow-lg border border-gray-200">
-                {industries.map((industry) => (
-                  <DropdownMenuItem key={industry} className="hover:bg-gray-50">
-                    <a href="#industries" className="w-full">
+              <a
+                href="#about"
+                className="nav-link font-medium"
+              >
+                About Us
+              </a>
+              <div className="relative group">
+                <span className="nav-link font-medium flex items-center gap-1 cursor-pointer">
+                  Industries
+                  <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
+                </span>
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  {industries.map((industry) => (
+                    <a
+                      key={industry}
+                      href="#industries"
+                      className="block px-4 py-3 text-gray-600 hover:text-navy hover:bg-gray-50 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                    >
                       {industry}
                     </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  ))}
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* CTA Button */}

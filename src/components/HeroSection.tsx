@@ -17,7 +17,7 @@ const HeroSection = () => {
               customer retention, boost repeat purchases, and turn first-time
               shoppers into lifelong brand advocates.
             </p>
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center">
               <Button className="btn-hero text-lg px-8 py-4">
                 Talk to Our Experts
               </Button>

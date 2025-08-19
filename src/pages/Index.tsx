@@ -6,8 +6,11 @@ import LoyaltySolutionSection from "@/components/LoyaltySolutionSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
+  useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-white">
       <Header />

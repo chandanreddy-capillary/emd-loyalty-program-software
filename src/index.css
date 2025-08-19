@@ -157,7 +157,42 @@ All colors MUST be HSL.
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
 
+  .hover-pop {
+    @apply transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl transform;
+  }
+
   .nav-link {
     @apply relative text-gray-600 hover:text-navy transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-teal after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
+
+  /* Scroll Animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-in-mask {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .slide-in-mask.animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Staggered Animation Delays */
+  .delay-1 { transition-delay: 0.1s; }
+  .delay-2 { transition-delay: 0.2s; }
+  .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; }
+  .delay-5 { transition-delay: 0.5s; }
+  .delay-6 { transition-delay: 0.6s; }
 }
