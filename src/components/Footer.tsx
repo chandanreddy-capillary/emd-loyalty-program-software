@@ -10,11 +10,12 @@ const Footer = () => {
       "API Integration"
     ],
     "Industries": [
-      "Retail & E-commerce",
-      "Hospitality", 
-      "Financial Services",
-      "Healthcare",
-      "Automotive"
+      "Airline",
+      "CPG", 
+      "Conglomerates",
+      "Fuel Retail",
+      "Hospitality",
+      "Retail"
     ],
     "Clients": [
       "Case Studies",

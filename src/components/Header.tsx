@@ -1,16 +1,29 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
     { name: "Solutions", href: "#solutions" },
-    { name: "Industries", href: "#industries" },
     { name: "Clients", href: "#clients" },
     { name: "About Us", href: "#about" },
-    { name: "Contact Us", href: "#contact" },
+  ];
+
+  const industries = [
+    "Airline",
+    "CPG", 
+    "Conglomerates",
+    "Fuel Retail",
+    "Hospitality",
+    "Retail"
   ];
 
   return (
@@ -25,7 +38,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {navigation.map((item) => (
               <a
                 key={item.name}
@@ -35,12 +48,27 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="nav-link font-medium flex items-center gap-1">
+                Industries
+                <ChevronDown size={16} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white shadow-lg border border-gray-200">
+                {industries.map((industry) => (
+                  <DropdownMenuItem key={industry} className="hover:bg-gray-50">
+                    <a href="#industries" className="w-full">
+                      {industry}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button className="btn-hero">
-              Talk to Our Experts
+              Contact Us
             </Button>
           </div>
 
@@ -70,8 +98,21 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-3 py-2">
+                <h4 className="font-semibold text-gray-800 mb-2">Industries</h4>
+                {industries.map((industry) => (
+                  <a
+                    key={industry}
+                    href="#industries"
+                    className="block px-3 py-2 text-gray-600 hover:text-navy transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {industry}
+                  </a>
+                ))}
+              </div>
+              <div className="px-3 py-2">
                 <Button className="btn-hero w-full">
-                  Talk to Our Experts
+                  Contact Us
                 </Button>
               </div>
             </div>

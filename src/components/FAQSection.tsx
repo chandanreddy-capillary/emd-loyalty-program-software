@@ -62,12 +62,9 @@ const FAQSection = () => {
           <p className="text-gray-600 mb-6">
             Still have questions? We'd love to help.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <button className="btn-hero">
               Talk to Our Experts
-            </button>
-            <button className="btn-outline">
-              View Documentation
             </button>
           </div>
         </div>
