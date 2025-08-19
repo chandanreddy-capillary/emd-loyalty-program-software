@@ -37,10 +37,10 @@ const HeroSection = () => {
               />
               {/* Floating elements for visual appeal */}
               <div className="absolute -top-4 -right-4 bg-teal text-white px-4 py-2 rounded-lg shadow-lg animate-bounce">
-                +15% Retention
+                390+ Brands
               </div>
               <div className="absolute -bottom-4 -left-4 bg-navy text-white px-4 py-2 rounded-lg shadow-lg animate-bounce delay-300">
-                99.99% Uptime
+                1.2 Bn+ Loyalty Members
               </div>
             </div>
           </div>
