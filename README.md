@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# Project Documentation
 
-## Project info
+## Project Info
+URL: tbh (will update once deployed on Vercel)
 
-**URL**: https://lovable.dev/projects/c1cbe71f-31f6-4f52-95c0-bb1b9e092e3e
+## How to Edit This Code
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c1cbe71f-31f6-4f52-95c0-bb1b9e092e3e) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Local Development (Recommended)
+Make sure you have Node.js (v18+) and npm installed.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository using the GitHub repo URL
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Step 2: Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install the necessary dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server with hot reloading
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Edit Directly in GitHub
 
-**Use GitHub Codespaces**
+1. Navigate to the file you want to change  
+2. Click the Edit button (pencil icon)  
+3. Make edits and commit directly to the repo  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Use GitHub Codespaces
 
-## What technologies are used for this project?
+1. Go to your repository on GitHub  
+2. Click the "Code" button → "Codespaces" tab  
+3. Select "New codespace" to launch a cloud IDE  
+4. Edit and run the project, then commit and push changes  
 
-This project is built with:
+## Tech Stack
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Vite  
+- TypeScript  
+- React  
+- shadcn-ui  
+- Tailwind CSS  
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/c1cbe71f-31f6-4f52-95c0-bb1b9e092e3e) and click on Share -> Publish.
+### Using Vercel
 
-## Can I connect a custom domain to my Lovable project?
+- This project is deployed using Vercel.  
+- Push your code to GitHub  
+- Connect your repository to Vercel  
+- Vercel will automatically build and deploy your project  
+- Set the Production Branch (usually `main`)  
 
-Yes, you can!
+### Custom Domain Setup
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+#### Adding a Domain in Vercel
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Open your project dashboard in Vercel  
+2. Go to "Settings" → "Domains"  
+3. Add your custom domain  
+4. Update your DNS records as instructed by Vercel  
+
+For details, see: [Vercel Custom Domains](https://vercel.com/docs/concepts/domains/custom-domains)  
+
+## Ownership
+
+This repository and all code contained within it are the exclusive property of the project owner.  
+Unauthorized use, reproduction, or distribution of this code is strictly prohibited.  
+
+## Access Policy
+
+- This repository is private.  
+- Contributions, forks, and pull requests are not permitted without explicit authorization.  
+- Access is limited to authorized collaborators only.  
+
+## Rights
+
+All rights reserved.  
+Any form of copying, modification, or redistribution without prior written consent from the owner is prohibited.
