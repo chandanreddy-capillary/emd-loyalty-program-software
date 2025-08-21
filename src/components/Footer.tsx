@@ -1,31 +1,31 @@
-
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const footerLinks = {
     "Solutions": [
-      "Loyalty Management",
-      "Nudge Framework", 
-      "LDS Framework",
-      "CDP & LPM",
-      "Actionable AI"
+      { name: "Loyalty Management", path: "/solutions" },
+      { name: "Nudge Framework", path: "/solutions" },
+      { name: "LDS Framework", path: "/solutions" },
+      { name: "CDP & LPM", path: "/solutions" },
+      { name: "Actionable AI", path: "/solutions" },
     ],
     "Industries": [
-      "Airline",
-      "CPG", 
-      "Conglomerates",
-      "Fuel Retail",
-      "Hospitality",
-      "Retail"
+      { name: "Airline", path: "/industries/airline" },
+      { name: "CPG", path: "/industries/cpg" },
+      { name: "Conglomerates", path: "/industries/conglomerates" },
+      { name: "Fuel Retail", path: "/industries/fuel-retail" },
+      { name: "Hospitality", path: "/industries/hospitality" },
+      { name: "Retail", path: "/industries/retail" },
     ],
     "Clients": [
-      "Case Studies",
-      "Success Stories",
-      "Testimonials"
+      { name: "Case Studies", path: "/notfound" },
+      { name: "Success Stories", path: "/notfound" },
+      { name: "Testimonials", path: "/notfound" },
     ],
     "About Us": [
-      "Our Story",
-      "Partners"
-    ]
+      { name: "Our Story", path: "/about" },
+      { name: "Partners", path: "/notfound" },
+    ],
   };
 
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold mb-4">
-              Loyalty Program Software
+              <Link to="/">Loyalty Program Software</Link>
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Enterprise-grade loyalty platform trusted by leading brands worldwide.
@@ -48,13 +48,13 @@ const Footer = () => {
               <h4 className="font-semibold text-lg mb-4">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a 
-                      href="#" 
+                  <li key={link.name}>
+                    <Link
+                      to={link.path}
                       className="text-gray-300 hover:text-teal transition-colors duration-300"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -69,15 +69,15 @@ const Footer = () => {
               © 2025 Loyalty Program Software. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-300 hover:text-teal transition-colors duration-300">
+              <Link to="/notfound" className="text-gray-300 hover:text-teal transition-colors duration-300">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-300 hover:text-teal transition-colors duration-300">
+              </Link>
+              <Link to="/notfound" className="text-gray-300 hover:text-teal transition-colors duration-300">
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-300 hover:text-teal transition-colors duration-300">
+              </Link>
+              <Link to="/notfound" className="text-gray-300 hover:text-teal transition-colors duration-300">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

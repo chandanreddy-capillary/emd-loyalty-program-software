@@ -1,131 +1,126 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";   // use react-router-dom for SPA routing
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Solutions", href: "#solutions" },
-    { name: "Clients", href: "#clients" },
-    { name: "About Us", href: "#about" },
+    { name: "Solutions", to: "/solutions" },
+    { name: "Clients", to: "/clients" },
+    { name: "About Us", to: "/about" },
   ];
 
   const industries = [
-    "Airline",
-    "CPG", 
-    "Conglomerates",
-    "Fuel Retail",
-    "Hospitality",
-    "Retail"
+    { name: "Airline", to: "/industries/airline" },
+    { name: "CPG", to: "/industries/cpg" },
+    { name: "Conglomerates", to: "/industries/conglomerates" },
+    { name: "Fuel Retail", to: "/industries/fuel-retail" },
+    { name: "Hospitality", to: "/industries/hospitality" },
+    { name: "Retail", to: "/industries/retail" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          
+          {/* ✅ Logo links to homepage */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-navy">
+            <Link to="/" className="text-2xl font-bold text-navy">
               Loyalty Program Software
-            </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-12">
-            <a
-              href="#solutions"
-              className="nav-link font-medium"
-            >
-              Solutions
-            </a>
-            <div className="flex items-center space-x-12">
-              <a
-                href="#clients"
-                className="nav-link font-medium"
+          <div className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link 
+                key={item.name} 
+                to={item.to} 
+                className="text-gray-700 hover:text-navy"
               >
-                Clients
-              </a>
-              <a
-                href="#about"
-                className="nav-link font-medium"
-              >
-                About Us
-              </a>
-              <div className="relative group">
-                <span className="nav-link font-medium flex items-center gap-1 cursor-pointer">
-                  Industries
-                  <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
-                </span>
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {industries.map((industry) => (
-                    <a
-                      key={industry}
-                      href="#industries"
-                      className="block px-4 py-3 text-gray-600 hover:text-navy hover:bg-gray-50 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
-                    >
-                      {industry}
-                    </a>
-                  ))}
-                </div>
+                {item.name}
+              </Link>
+            ))}
+
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center text-gray-700 hover:text-navy">
+                Industries <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-48">
+                {industries.map((industry) => (
+                  <Link
+                    key={industry.name}
+                    to={industry.to}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    {industry.name}
+                  </Link>
+                ))}
               </div>
             </div>
-          </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button className="btn-hero">
-              Contact Us
-            </Button>
+            {/* Contact Button */}
+            <Link to="/contact">
+              <Button>Contact Us</Button>
+            </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-navy transition-colors duration-200"
+              className="text-gray-700"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-600 hover:text-navy transition-colors duration-200"
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white shadow-md">
+          <div className="space-y-2 px-4 pt-2 pb-4">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.to}
+                className="block text-gray-700 py-2 hover:text-navy"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+
+            {/* Industries as collapsible list in mobile */}
+            <div>
+              <p className="font-medium text-gray-700 mt-2">Industries</p>
+              {industries.map((industry) => (
+                <Link
+                  key={industry.name}
+                  to={industry.to}
+                  className="block text-gray-600 pl-4 py-1 hover:text-navy"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.name}
-                </a>
+                  {industry.name}
+                </Link>
               ))}
-              <div className="px-3 py-2">
-                <h4 className="font-semibold text-gray-800 mb-2">Industries</h4>
-                {industries.map((industry) => (
-                  <a
-                    key={industry}
-                    href="#industries"
-                    className="block px-3 py-2 text-gray-600 hover:text-navy transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {industry}
-                  </a>
-                ))}
-              </div>
-              <div className="px-3 py-2">
-                <Button className="btn-hero w-full">
-                  Contact Us
-                </Button>
-              </div>
             </div>
+
+            <Link 
+              to="/contact" 
+              className="block mt-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Button className="w-full">Contact Us</Button>
+            </Link>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };

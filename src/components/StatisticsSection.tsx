@@ -1,14 +1,13 @@
 const StatisticsSection = () => {
   const statsRow1 = [
-    { number: "1.2 Bn+", label: "Loyalty Members" },
-    { number: "390+", label: "Brands" },
-    { number: "100+", label: "Loyalty Programs" },
+    { number: "30+", label: "Countries" },
+    { number: "50+", label: "Loyalty Programs" },
+    { number: "150+", label: "Global Brands" },
   ];
 
   const statsRow2 = [
-    { number: "99.99%", label: "System Uptime" },
-    { number: "60%", label: "Improved Customer Retention" },
-    { number: "50%", label: "Increased Customer Satisfaction" },
+    { number: "500M+", label: "Loyalty Members" },
+    { number: "3B+", label: "Transactions" },
   ];
 
   return (
@@ -40,7 +39,7 @@ const StatisticsSection = () => {
           </div>
           
           {/* Second Row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {statsRow2.map((stat, index) => (
               <div
                 key={index}

@@ -1,18 +1,20 @@
+import clubxLogo from "@/assets/clubx_logo2.png";
+import devicecoLogo from "@/assets/deviceco_logo.png";
+import slicehouseLogo from "@/assets/slicehouse_logo.png";
+import nexoraLogo from "@/assets/nexora_logo.png";
+import stridezLogo from "@/assets/stridez_logo.png";
+import swirlLogo from "@/assets/swirl_logo.png";
+import vertexLogo from "@/assets/vertex_logo.png";
+
 const LogoStrip = () => {
   const logos = [
-    { name: "Domino's", color: "#0078D4" },
-    { name: "Dell", color: "#007DB8" },
-    { name: "ASICS", color: "#0066CC" },
-    { name: "Shell", color: "#FFD520" },
-    { name: "Indigo", color: "#5C2D91" },
-    { name: "Hertz", color: "#FFCC00" },
-    { name: "Royal Caribbean", color: "#0066B2" },
-    { name: "PUMA", color: "#000000" },
-    { name: "Jotun", color: "#E30613" },
-    { name: "Santander", color: "#EC0000" },
-    { name: "Frontier", color: "#009639" },
-    { name: "TD Bank", color: "#00B04F" },
-    { name: "Tata Digital", color: "#1F497D" }
+    { name: "ClubX", src: clubxLogo },
+    { name: "DeviceCo", src: devicecoLogo },
+    { name: "Slicehouse", src: slicehouseLogo },
+    { name: "Nexora", src: nexoraLogo },
+    { name: "Stridez", src: stridezLogo },
+    { name: "Swirl", src: swirlLogo },
+    { name: "Vertex", src: vertexLogo },
   ];
 
   return (
@@ -21,42 +23,21 @@ const LogoStrip = () => {
         <p className="text-center text-gray-600 font-medium mb-8">
           Trusted by leading brands worldwide
         </p>
-        
-        <div className="overflow-hidden">
-          <div className="flex animate-pulse">
-            {/* First set of logos */}
-            <div className="flex space-x-16 min-w-full justify-around items-center logo-scroll">
-              {logos.map((logo, index) => (
-                <div
-                  key={`first-${index}`}
-                  className="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"
-                >
-                  <div
-                    className="font-bold text-xl px-4 py-2 rounded"
-                    style={{ color: logo.color }}
-                  >
-                    {logo.name}
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* Duplicate set for seamless scrolling */}
-            <div className="flex space-x-16 min-w-full justify-around items-center logo-scroll">
-              {logos.map((logo, index) => (
-                <div
-                  key={`second-${index}`}
-                  className="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"
-                >
-                  <div
-                    className="font-bold text-xl px-4 py-2 rounded"
-                    style={{ color: logo.color }}
-                  >
-                    {logo.name}
-                  </div>
-                </div>
-              ))}
-            </div>
+
+        <div className="overflow-hidden relative">
+          <div className="flex w-max logo-scroll">
+            {logos.concat(logos).map((logo, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 px-10 opacity-80 hover:opacity-100 transition-opacity duration-300"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="h-16 md:h-20 w-auto object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
