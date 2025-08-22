@@ -3,10 +3,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import LPSPage from "./pages/LPSPage";
-import ScrollToTop from "./components/ScrollToTop";
+import AirlinePage from "./pages/AirlinePage";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +36,7 @@ const App = () => (
 
           {/* Industries (dropdown items) */}
           <Route path="/industries" element={<NotFound />} />
-          <Route path="/industries/airline" element={<NotFound />} />
+          <Route path="/industries/airline" element={<AirlinePage />} />
           <Route path="/industries/cpg" element={<NotFound />} />
           <Route path="/industries/conglomerates" element={<NotFound />} />
           <Route path="/industries/fuel-retail" element={<NotFound />} />
