@@ -109,7 +109,7 @@ const AirlineLoyaltyPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-teal hover:bg-teal-light text-white px-8 py-4 text-lg">
-                Explore Airline Solutions
+                Explore Airline Loyalty Solutions
               </Button>
             </div>
           </div>
@@ -307,7 +307,7 @@ const AirlineLoyaltyPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-teal hover:bg-teal-light text-white px-8 py-4 text-lg">
-              Explore Airline Solutions
+              Explore Airline Loyalty Solutions
             </Button>
           </div>
         </div>

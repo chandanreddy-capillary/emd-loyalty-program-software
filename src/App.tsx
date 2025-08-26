@@ -8,6 +8,14 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import LPSPage from "./pages/LPSPage";
 import AirlinePage from "./pages/AirlinePage";
+import CPGPage from "./pages/CPGPage";
+import HospitalityPage from "./pages/HospitalityPage";
+import ConglomeratePage from "./pages/ConglomeratePage";
+import RetailPage from "./pages/RetailPage";
+import FuelRetailPage from "./pages/FuelRetailPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ClientsPage from "./pages/ClientsPage";
 
 const queryClient = new QueryClient();
 
@@ -29,22 +37,22 @@ const App = () => (
           <Route path="/solutions" element={<LPSPage />} />
 
           {/* Clients (no page yet) */}
-          <Route path="/clients" element={<NotFound />} />
+          <Route path="/clients" element={<ClientsPage />} />
 
           {/* About Us (no page yet) */}
-          <Route path="/about" element={<NotFound />} />
+          <Route path="/about" element={<AboutUsPage />} />
 
           {/* Industries (dropdown items) */}
           <Route path="/industries" element={<NotFound />} />
           <Route path="/industries/airline" element={<AirlinePage />} />
-          <Route path="/industries/cpg" element={<NotFound />} />
-          <Route path="/industries/conglomerates" element={<NotFound />} />
-          <Route path="/industries/fuel-retail" element={<NotFound />} />
-          <Route path="/industries/hospitality" element={<NotFound />} />
-          <Route path="/industries/retail" element={<NotFound />} />
+          <Route path="/industries/cpg" element={<CPGPage />} />
+          <Route path="/industries/conglomerates" element={<ConglomeratePage />} />
+          <Route path="/industries/fuel-retail" element={<FuelRetailPage />} />
+          <Route path="/industries/hospitality" element={<HospitalityPage />} />
+          <Route path="/industries/retail" element={<RetailPage />} />
 
           {/* Contact Us (no page yet) */}
-          <Route path="/contact" element={<NotFound />} />
+          <Route path="/contact" element={<ContactUsPage />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

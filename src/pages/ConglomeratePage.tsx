@@ -1,18 +1,18 @@
 import Header from "@/components/Header";
-import CPGLoyaltyPage from "@/components/CPGLoyaltyPage";
+import ConglomerateLoyaltyPage from "@/components/ConglomerateLoyaltyPage";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const CPGPage = () => {
+const ConglomeratePage = () => {
   useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <CPGLoyaltyPage />
+      <ConglomerateLoyaltyPage />
       <Footer />
     </div>
   );
 };
 
-export default CPGPage;
+export default ConglomeratePage;
