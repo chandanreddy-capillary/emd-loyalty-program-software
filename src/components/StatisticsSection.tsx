@@ -14,7 +14,7 @@ const StatisticsSection = () => {
     <section className="bg-gradient-section py-20 fade-in-up">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl lg:text-5xl font-bold text-navy mb-4">
-          Pioneers of Managed SaaS
+          Loyalty Solutions Proven at Global Scale
         </h1>
         <h2 className="text-2xl lg:text-3xl font-semibold text-gray-600 mb-16">
           Best-in-class loyalty program software with expert services
