@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const footerLinks = {
     "Solutions": [
-      { name: "Loyalty Management", path: "/solutions" },
-      { name: "Nudge Framework", path: "/solutions" },
-      { name: "LDS Framework", path: "/solutions" },
-      { name: "CDP & LPM", path: "/solutions" },
-      { name: "Actionable AI", path: "/solutions" },
+      { name: "Loyalty Program Software", path: "/solutions" },
+      { name: "Why Us", path: "/solutions" },
+      { name: "Loyalty Features", path: "/solutions" },
+      { name: "Loyalty Program Types", path: "/solutions" },
+      { name: "Platform Capabilities", path: "/solutions" },
     ],
     "Industries": [
       { name: "Airline", path: "/industries/airline" },

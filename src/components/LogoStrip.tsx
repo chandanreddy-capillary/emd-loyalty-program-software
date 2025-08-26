@@ -9,12 +9,12 @@ import vertexLogo from "@/assets/vertex_logo.png";
 const LogoStrip = () => {
   const logos = [
     { name: "ClubX", src: clubxLogo },
-    { name: "DeviceCo", src: devicecoLogo },
-    { name: "Slicehouse", src: slicehouseLogo },
-    { name: "Nexora", src: nexoraLogo },
     { name: "Stridez", src: stridezLogo },
+    { name: "Slicehouse", src: slicehouseLogo },
     { name: "Swirl", src: swirlLogo },
+    { name: "DeviceCo", src: devicecoLogo },
     { name: "Vertex", src: vertexLogo },
+    { name: "Nexora", src: nexoraLogo },
   ];
 
   return (
