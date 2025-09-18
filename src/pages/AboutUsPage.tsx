@@ -18,7 +18,7 @@ const AboutUsPage = () => {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Trust & Reliability",
-      description: "Built on enterprise-grade security and 99.99% uptime, our platform ensures your loyalty programs run smoothly at any scale."
+      description: "Built on enterprise-grade security and super high uptime, our AI-powered platform ensures your loyalty programs run smoothly at any scale."
     },
     {
       icon: <Zap className="w-8 h-8" />,
@@ -36,27 +36,27 @@ const AboutUsPage = () => {
 
   const milestones = [
     {
-      year: "2008",
+      year: "2015",
       title: "Company Founded",
       description: "Started our journey with a vision to transform customer engagement through intelligent loyalty solutions."
     },
     {
-      year: "2012",
+      year: "2019",
       title: "First Major Enterprise Client",
       description: "Successfully deployed loyalty platform for Fortune 500 company, establishing our enterprise credentials."
     },
     {
-      year: "2016",
+      year: "2020",
       title: "AI Integration Launch",
       description: "Introduced AI-powered personalization and predictive analytics to enhance customer experiences."
     },
     {
-      year: "2020",
+      year: "2023",
       title: "1 Billion Members Milestone",
       description: "Reached the significant milestone of managing over 1 billion loyalty program members globally."
     },
     {
-      year: "2023",
+      year: "2025",
       title: "Next-Gen Platform",
       description: "Launched our latest platform with advanced CDP, omnichannel capabilities, and real-time analytics."
     }

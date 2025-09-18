@@ -30,9 +30,6 @@ const App = () => (
           {/* Homepage */}
           <Route path="/" element={<Index />} />
 
-          {/* Homepage */}
-          <Route path="/" element={<Index />} />
-
           {/* Solutions */}
           <Route path="/solutions" element={<LPSPage />} />
 

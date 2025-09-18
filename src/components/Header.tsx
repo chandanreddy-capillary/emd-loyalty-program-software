@@ -14,11 +14,18 @@ const Header = () => {
 
   const industries = [
     { name: "Airline", to: "/industries/airline" },
-    { name: "CPG", to: "/industries/cpg" },
+    { name: "Banking", to: "/industries/banking" },
+    { name: "Beauty", to: "/industries/beauty" },
     { name: "Conglomerates", to: "/industries/conglomerates" },
+    { name: "CPG", to: "/industries/cpg" },
+    { name: "eCommerce", to: "/industries/ecommerce" },
+    { name: "Fashion", to: "/industries/fashion" },
+    { name: "Food & Beverage", to: "/industries/food-beverage" },
     { name: "Fuel Retail", to: "/industries/fuel-retail" },
+    { name: "Health & Wellness", to: "/industries/health-wellness" },
     { name: "Hospitality", to: "/industries/hospitality" },
     { name: "Retail", to: "/industries/retail" },
+    { name: "Telecom", to: "/industries/telecom" }
   ];
 
   return (
