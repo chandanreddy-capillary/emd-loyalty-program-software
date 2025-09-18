@@ -16,6 +16,13 @@ import FuelRetailPage from "./pages/FuelRetailPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ClientsPage from "./pages/ClientsPage";
+import BankingPage from "./pages/BankingPage";
+import BeautyPage from "./pages/BeautyPage";
+import EcommercePage from "./pages/EcommercePage";
+import FashionPage from "./pages/FashionPage";
+import FoodBeveragePage from "./pages/FoodBeveragePage";
+import HealthWellnessPage from "./pages/HealthWellnessPage";
+import TelecomPage from "./pages/TelecomPage";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +54,13 @@ const App = () => (
           <Route path="/industries/fuel-retail" element={<FuelRetailPage />} />
           <Route path="/industries/hospitality" element={<HospitalityPage />} />
           <Route path="/industries/retail" element={<RetailPage />} />
+          <Route path="/industries/banking" element={<BankingPage />} />
+          <Route path="/industries/beauty" element={<BeautyPage />} />
+          <Route path="/industries/ecommerce" element={<EcommercePage />} />
+          <Route path="/industries/fashion" element={<FashionPage />} />
+          <Route path="/industries/food-beverage" element={<FoodBeveragePage />} />
+          <Route path="/industries/health-wellness" element={<HealthWellnessPage />} />
+          <Route path="/industries/telecom" element={<TelecomPage />} />
 
           {/* Contact Us (no page yet) */}
           <Route path="/contact" element={<ContactUsPage />} />
